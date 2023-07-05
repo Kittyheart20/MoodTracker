@@ -15,9 +15,11 @@ class MoodStore: ObservableObject {
         MoodEntry.init(date: .now, mood: .neutral, note: "Meh", tags: <#T##Set<String>#>),
         MoodEntry.init(date: .now, mood: .sad, note: "Everything bagel", tags: <#T##Set<String>#>)*/
         
+        /*MoodEntry.init(date: Date().addingTimeInterval(-17200800), mood: .neutral, note: "oof.", tags: nil),
         MoodEntry.init(date: Date(), mood: .happy, note: "Had a great day!", tags: ["party", "friends"]),
         MoodEntry.init(date: Date().addingTimeInterval(-86400), mood: .sad, note: nil, tags: ["work"]),
-        MoodEntry.init(date: Date().addingTimeInterval(-172800), mood: .neutral, note: "An ordinary day.", tags: nil)
+        MoodEntry.init(date: Date().addingTimeInterval(-172800), mood: .neutral, note: "An ordinary day.", tags: nil)*/
+        
 
 
     ]

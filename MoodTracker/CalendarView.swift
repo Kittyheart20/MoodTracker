@@ -12,22 +12,37 @@ struct CalendarView: View {
         
         var body: some View {
             VStack{
-                List(moodStore.moodEntries.sorted(by: { $0.date > $1.date }), id: \.id) { moodEntry in
-                        VStack {
-                            HStack {
-                                Text("\(moodEntry.date, formatter: DateFormatter.shortDate)")
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        
-                                Text(moodEntry.mood.rawValue.capitalized)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                        
-                                Text(moodEntry.note ?? "")
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                            }
-                            
-                        }
-                        .padding([.leading, .trailing])
-                    }
+                Spacer()
+                if (moodStore.moodEntries.count == 0) {
+                    Text("You haven't added anything yet!")
+                        .padding(20)
+                        .font(.title)
+                        .multilineTextAlignment(.center)
+                    Text("Click \"Add Mood\" to add your first mood track")
+                        .padding(20)
+                        .font(.title)
+                        .multilineTextAlignment(.center)
+                    Spacer()
+                } else {
+                    List(moodStore.moodEntries.sorted(by: { $0.date > $1.date }), id: \.id) { moodEntry in
+                                            VStack {
+                                                HStack {
+                                                    Text("\(moodEntry.date, formatter: DateFormatter.shortDate)")
+                                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                                            
+                                                    Text(moodEntry.mood.rawValue.capitalized)
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                                            
+                                                    Text(moodEntry.note ?? "")
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                                }
+                                                
+                                            }
+                                            .padding([.leading, .trailing])
+                                    }
+                }
+                
+                
                 NavigationLink(destination: MoodView()) {
                                     Text("Add Mood")
                                         .frame(maxWidth: .infinity)
@@ -39,7 +54,6 @@ struct CalendarView: View {
                                 .padding()
                            
             }
-            .background(Color(.systemGray6))
         }
 }
 

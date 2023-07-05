@@ -14,6 +14,11 @@
 		DCA82B6E2A36AFBE0037B5C7 /* MoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B6D2A36AFBE0037B5C7 /* MoodTrackerTests.swift */; };
 		DCA82B782A36AFBE0037B5C7 /* MoodTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B772A36AFBE0037B5C7 /* MoodTrackerUITests.swift */; };
 		DCA82B7A2A36AFBE0037B5C7 /* MoodTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B792A36AFBE0037B5C7 /* MoodTrackerUITestsLaunchTests.swift */; };
+		DCA82B872A36C3660037B5C7 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B862A36C3660037B5C7 /* MoodEntry.swift */; };
+		DCA82B892A36C38A0037B5C7 /* MoodStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B882A36C38A0037B5C7 /* MoodStore.swift */; };
+		DCA82B8B2A36C3A60037B5C7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B8A2A36C3A60037B5C7 /* CalendarView.swift */; };
+		DCA82B8D2A36DA4A0037B5C7 /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B8C2A36DA4A0037B5C7 /* MoodView.swift */; };
+		DCA82B8F2A37774F0037B5C7 /* TagStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA82B8E2A37774F0037B5C7 /* TagStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		DCA82B732A36AFBE0037B5C7 /* MoodTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA82B772A36AFBE0037B5C7 /* MoodTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerUITests.swift; sourceTree = "<group>"; };
 		DCA82B792A36AFBE0037B5C7 /* MoodTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DCA82B862A36C3660037B5C7 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		DCA82B882A36C38A0037B5C7 /* MoodStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodStore.swift; sourceTree = "<group>"; };
+		DCA82B8A2A36C3A60037B5C7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		DCA82B8C2A36DA4A0037B5C7 /* MoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
+		DCA82B8E2A37774F0037B5C7 /* TagStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +106,13 @@
 			children = (
 				DCA82B5C2A36AFBC0037B5C7 /* MoodTrackerApp.swift */,
 				DCA82B5E2A36AFBC0037B5C7 /* ContentView.swift */,
+				DCA82B8A2A36C3A60037B5C7 /* CalendarView.swift */,
+				DCA82B8C2A36DA4A0037B5C7 /* MoodView.swift */,
 				DCA82B602A36AFBE0037B5C7 /* Assets.xcassets */,
 				DCA82B622A36AFBE0037B5C7 /* Preview Content */,
+				DCA82B862A36C3660037B5C7 /* MoodEntry.swift */,
+				DCA82B882A36C38A0037B5C7 /* MoodStore.swift */,
+				DCA82B8E2A37774F0037B5C7 /* TagStore.swift */,
 			);
 			path = MoodTracker;
 			sourceTree = "<group>";
@@ -257,8 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA82B8B2A36C3A60037B5C7 /* CalendarView.swift in Sources */,
+				DCA82B8D2A36DA4A0037B5C7 /* MoodView.swift in Sources */,
 				DCA82B5F2A36AFBC0037B5C7 /* ContentView.swift in Sources */,
 				DCA82B5D2A36AFBC0037B5C7 /* MoodTrackerApp.swift in Sources */,
+				DCA82B892A36C38A0037B5C7 /* MoodStore.swift in Sources */,
+				DCA82B872A36C3660037B5C7 /* MoodEntry.swift in Sources */,
+				DCA82B8F2A37774F0037B5C7 /* TagStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

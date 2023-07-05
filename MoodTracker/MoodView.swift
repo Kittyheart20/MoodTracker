@@ -35,8 +35,6 @@ struct MoodView: View {
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
             
             
-            
-            
             Button(action: {
                 saveMood()
                 presentationMode.wrappedValue.dismiss()
