@@ -26,6 +26,18 @@ struct MoodView: View {
                 MoodButton(mood: .sad, selectedMood: $selectedMood)
             }
             
+            Text("Select Tags:")
+                .font(.headline)
+                            
+            ScrollView(.horizontal) {
+                HStack(spacing: 10) {
+                    ForEach(tagStore.tags, id: \.self) { tag in
+                        TagButton(tag: tag, selectedTags: $selectedTags)
+                    }
+                }
+                .padding(.horizontal)
+            }
+            
             Text("Add a note (optional):")
                 .font(.headline)
             
@@ -53,7 +65,7 @@ struct MoodView: View {
     
     private func saveMood() {
             guard let selectedMood = selectedMood else {
-                return // No mood selected, handle accordingly
+                return 
             }
             
         let moodEntry = MoodEntry(date: Date(), mood: selectedMood, note: note, tags: selectedTags.isEmpty ? nil : selectedTags)
@@ -65,6 +77,28 @@ struct MoodView: View {
 struct MoodView_Previews: PreviewProvider {
     static var previews: some View {
         MoodView()
-        
+            .environmentObject(MoodStore())
+            .environmentObject(TagStore())
+    }
+}
+
+struct TagButton: View {
+    let tag: String
+    @Binding var selectedTags: Set<String>
+    
+    var body: some View {
+        Button(action: {
+            if selectedTags.contains(tag) {
+                selectedTags.remove(tag)
+            } else {
+                selectedTags.insert(tag)
+            }
+        }) {
+            Text(tag)
+                .padding()
+                .foregroundColor(selectedTags.contains(tag) ? .white : .blue)
+                .background(selectedTags.contains(tag) ? Color.blue : Color.clear)
+                .cornerRadius(10)
+        }
     }
 }

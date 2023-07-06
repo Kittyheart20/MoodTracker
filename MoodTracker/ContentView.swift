@@ -9,18 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var moodStore: MoodStore
+    @EnvironmentObject var tagStore: TagStore
     @State private var selectedMood: Mood?
     @State private var note: String = ""
     @State private var showMoodView = false
+    @State private var showTagView = false
     
     var body: some View {
         NavigationView {
             if showMoodView {
                 MoodView()
+            } else if showTagView {
+                TagView()
             } else {
                 CalendarView()
             }
         }
+        .environmentObject(moodStore)
+        .environmentObject(TagStore())
     }
 
 }
@@ -28,6 +34,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(MoodStore())
+            .environmentObject(TagStore())
     }
 }
 
@@ -49,8 +57,6 @@ struct MoodButton: View {
         .cornerRadius(10)
     }
 }
-
-
 
 enum Mood: String {
     case happy, neutral, sad

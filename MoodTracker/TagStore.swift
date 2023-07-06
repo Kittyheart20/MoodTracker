@@ -6,9 +6,19 @@
 //
 
 import Foundation
-import Combine
-import SwiftUI
 
 class TagStore: ObservableObject {
-    @Published var tags: Set<String> = []
+    @Published var tags: [String] = [
+    "School",
+    "Work",
+    "Friends"
+    ]
+
+    func addTag(tag: String) {
+        guard !tags.contains(tag) else {
+            return
+        }
+
+        tags.append(tag)
+    }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MoodEntry {
+struct MoodEntry: Identifiable {
     let id = UUID()
     let date: Date
     let mood: Mood
